@@ -34,3 +34,18 @@ end
 def find_a(array)
   array.select {|string| string.start_with?("a")}
 end
+
+def sum_array(array)
+  array.inject do |sum, num|
+    sum + num
+  end
+end
+
+def add_s(array)
+  array.map.with_index do |word, index|
+    if index != 1
+      word << "s"
+    end
+    word
+  end
+end
